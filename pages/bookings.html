@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Suche</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script async src="../scripts/bookings.js"></script>
+</head>
+<body class="lightmode">
+    <div class="app-body">
+        <button id="themeButton">
+            <div class="themeIcon">🌙</div>
+        </button>
+        <div class="navbar-box">
+            <nav class="navbar">
+                <a href="./reiseziele.html">Reiseziele</a>
+                <a href="../index.html" class="active">Home</a>
+                <a href="./about.html">Über das Projekt</a>
+                <a href="./bookings.html">Hotel Buchen</a>
+            </nav>
+        </div>
+
+        <div class="header">
+            <h1>Hotelsuche</h1>
+        </div>
+
+        <main class="content">
+            <form id="hotelSearchForm">
+                <div>
+                    <label for="location">Ort:</label>
+                    <input list="cities" id="location" name="location" required>
+                    <datalist id="cities">
+                        <option value="Berlin">
+                        <option value="Hamburg">
+                        <option value="München">
+                        <option value="Köln">
+                        <option value="Frankfurt am Main">
+                        <option value="Stuttgart">
+                        <option value="Düsseldorf">
+                        <option value="Dortmund">
+                        <option value="Essen">
+                        <option value="Leipzig">
+                    </datalist>
+                </div>
+                <div>
+                    <label for="priceFrom">Preis von:</label>
+                    <input type="number" id="priceFrom" name="priceFrom" required>
+                </div>
+                <div>
+                    <label for="priceTo">Preis bis:</label>
+                    <input type="number" id="priceTo" name="priceTo" required>
+                </div>
+                <div>
+                    <label for="date">Anreisedatum:</label>
+                    <input type="date" id="checkinDate" name="checkinDate" required>
+                </div>
+                <div>
+                    <label for="checkoutDate">Abreisedatum:</label>
+                    <input type="date" id="checkoutDate" name="checkoutDate" required>
+                </div>
+                <div>
+                    <label for="adults">Anzahl der Erwachsenen:</label>
+                    <input type="number" id="adults" name="adults" required min="1">
+                </div>
+                <button type="submit">Suchen</button>
+            </form>
+            
+
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Hotel Finder</p>
+        </footer>    
+    </div>
+
+</body>
+</html>

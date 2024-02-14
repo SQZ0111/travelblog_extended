@@ -1,0 +1,743 @@
+/* global variables */
+:root {
+   --font-color: #416a59;
+   --navbar-links-color: #716c6c;
+   --navbar-links-darkmode-color: #ffffff;
+   --pagesbox-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   --pages-hover-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+   --hover-pointer: pointer;
+   --font-hover-color: #acc16d;
+   --font-recipe-darkmode-color: #9c27b0; 
+   --font-hover-recipe-darkmode-color: #6a0080;
+
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* app-body on every page */
+.lightmode {
+    color: var(--font-color);
+    background-color: #f5eec2;
+    font-family: 'Roboto', sans-serif;
+	font-size: 22px;
+    padding: 0;
+}
+
+.darkmode {
+    color: var(--navbar-links-darkmode-color);
+    background-color: #010e09;
+}
+
+/* Button for dark mode */
+#themeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #416a59;
+    color: #ffffff;
+    width: clamp(50px, 5vw, 100px);
+    font-size: clamp(10px, 50%, 24px);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+h1 {
+	font-family:'Rock Salt', sans-serif;
+	text-align: center;
+}
+
+h2 {
+	font-family:'Rock Salt', sans-serif;
+}
+
+.app-body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* navbar on every page */
+.navbar-box {
+    height: 10vh;
+    width: 100vw;
+}
+.navbar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+	font-weight: bold;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: var(--pagesbox-shadow);
+	text-transform: uppercase;
+}
+
+/* Links styling */
+a {
+    text-decoration: none;
+    color: var(--navbar-links-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    cursor: var(--hover-pointer);
+    transform: scale(1.05);
+    box-shadow: var(--pagesbox-shadow);
+    background-color: #a9c25d;
+	padding:10px;
+}
+
+a.active {
+    cursor: var(--hover-pointer);
+    transform: scale(1.05);
+    box-shadow: var(--pagesbox-shadow);
+    background-color: #a9c25d;
+	padding:10px;
+}
+
+
+/* navbar for all pages */
+.navbar a {
+    text-decoration: none;
+    color: var(--navbar-links-color);
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+  
+.navbar a:hover {
+    transform: scale(1.05);
+    box-shadow: var(--pagesbox-shadow);
+    background-color: #a9c25d;
+}
+
+.navbar-darkmode {
+    background-color: #40073d;
+    color: var(--navbar-links-darkmode-color);
+    border: #400718 solid 1px;
+}
+/* Header on every page */
+.header {
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+/* startpage content */
+.content {
+    height: 30%;
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    text-align: left;
+    padding: 20px;
+}
+
+/* start-page img */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+  
+.image img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.logoimage {
+	width:20%;
+	padding-right:5%;
+	margin-top: 2.5%;
+}
+
+/* about page content section */
+.about-content {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    height: 70%;
+    gap: 5%;
+}
+  
+.about-text {
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    text-align: left;
+}
+  
+.profile-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.profile-image img {
+    max-width: 100%;
+    height: auto;
+	margin-top: 1em;
+}
+  
+.skills-list {
+    width: 30%;
+}
+
+ul {
+	flex-wrap: wrap;
+}
+
+/* faq section */
+
+.faq {
+    background-color: #e6e1c4;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.faq-darkmode {
+    background-color: #40073d;
+}
+
+/* faq-item */
+.faq-item {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: var(--pagesbox-shadow);
+    transition: all 0.3s ease;
+    background-color: #f5eec2;
+}
+
+.faq-item-darkmode {
+    background-color: #40073d;
+}
+
+.faq-item:hover {
+    cursor: var(--hover-pointer);
+    transform: scale(1.05);
+    box-shadow: var(--pages-hover-shadow);
+    background-color: #e6e1c4;
+}
+
+.faq-item-darkmode:hover {
+    cursor: var(--hover-pointer);
+    transform: scale(1.05);
+    box-shadow: var(--pages-hover-shadow);
+    background-color: #bc1ab4;
+}
+
+.faq-answer-hidden {
+    display: none;
+}
+
+.faq-answer-visible {
+    display: visible;
+}
+/* faq item heading */
+
+
+
+/* Destinations content */
+.destination-content {
+	width:60%;
+	display: flex;
+	flex-direction: column;
+  }
+  
+.destination {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+	
+}
+
+hr {
+    margin-left: 0;
+    margin-right: 0;
+	border: 1px solid #416a59;
+}
+  
+.destination h2 {
+    margin-top: 10px;
+  }
+  
+.destination img {
+    width: 200px;
+    height: auto;
+}
+
+
+.destination-desc {
+
+	margin-left: 30px;
+	display: flex;
+	align-self: end;
+}
+
+
+/* Städte CSS */
+.city {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* city darkmode */
+.city-darkmode {
+    background-color: var(--font-recipe-darkmode-color);
+}
+
+.city-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city-header img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.city-content {
+    margin-top: 20px;
+}
+
+.city-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.city-section {
+    margin-top: 30px;
+}
+
+.city-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.city-section img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* footer on every page */
+.footer {
+    justify-self: flex-end;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+	flex-direction:column;
+	margin-top:5%;
+}
+
+
+/* Rezept CSS */
+.recipe-content {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-preview {
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-preview img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe-preview a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--font-color);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.recipe-preview a:hover {
+    background-color: var(--font-hover-color);
+}
+
+
+.recipe-preview {
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.recipe-preview:hover {
+    transform: scale(1.03); /* leicht vergrößert beim Darüberfahren mit der Maus */
+}
+
+.recipe-preview h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Rezept preview css */
+
+.recipe-preview img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe-preview p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.recipe-preview a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--font-color);
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.recipe-preview a:hover {
+    background-color: var(--font-hover-color);
+}
+
+  
+/* rezept css darkmode */
+.recipe-content-darkmode, .recipe-preview-darkmode {
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #000000; /* Black background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(156, 39, 176, 0.4); /* Violet box shadow */
+    color: var(--font-recipe-darkmode-color); /* Cyberpunk violet font color */
+}
+
+.recipe-preview-darkmode img {
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.recipe-preview-darkmode a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--font-recipe-darkmode-color);
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.recipe-preview-darkmode a:hover {
+    background-color: var(--font-hover-recipe-darkmode-color);
+}
+
+.recipe-preview-darkmode {
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.recipe-preview-darkmode:hover {
+    transform: scale(1.03); /* Slightly enlarges when hovering */
+}
+
+.recipe-preview-darkmode h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Rezept preview css */
+.recipe-preview-darkmode img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.recipe-preview-darkmode p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.recipe-preview-darkmode a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--font-hover-recipe-darkmode-color);
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.recipe-preview-darkmode a:hover {
+    background-color: var(--font-hover-recipe-darkmode-color);
+}
+
+/* Responsive Design: Mobile */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .content {
+        width: 90%;
+    }
+
+    .header{
+        visibility: hidden;
+        z-index: -1;
+
+    }
+}
+
+/* Responsive Design: Tablets */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        margin: 5px 10px;
+    }
+
+    .content {
+        width: 80%;
+    }
+}
+
+/* Responsive Design: Desktop and above */
+@media only screen and (min-width: 1025px) {
+    body {
+        font-size: 22px;
+    }
+
+    .content {
+        width: 60%;
+    }
+}
+
+
+/* Default Styles for Headings */
+h1, h2, .destination h2, .city-section h2, .recipe-preview h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2, .destination h2, .city-section h2, .recipe-preview h2 {
+    font-size: 20px;
+}
+
+/* Responsive Design: Mobile */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 22px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    h2, .destination h2, .city-section h2, .recipe-preview h2 {
+        font-size: 18px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.content {
+    height: 150vh;
+    width: 100%;
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* Hotel Form  */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: var(--pagesbox-shadow);
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* Styling für einzelne Formularfelder */
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[list] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Spezifisches Styling für die Datalist */
+input[list] {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg"><path d="M35 55l35 35 35-35z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    cursor: pointer;
+}
+
+/* Verbessertes Erscheinungsbild für Dropdown-Listen */
+datalist {
+    padding: 5px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+datalist option {
+    padding: 5px;
+    cursor: pointer;
+}
+
+datalist option:hover {
+    background-color: #f0f0f0;
+}
+
+/* Styling für den Submit-Button */
+form button[type="submit"] {
+    background-color: var(--font-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: var(--font-hover-color);
+}
+
+/* Responsive Design für das Formular */
+@media only screen and (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+}
+
+#searchResults {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 50%;
+    width: 60%;
+    background-color: #f5f5f5;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#searchResults.invisible {
+    display: none;
+}
+.hotel { 
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.hotel-img {
+    min-width: 240px;
+    min-height: 240px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.hotel-img:hover {
+    transform: scale(1.1); 
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+ul {
+    list-style-type: none;
+}
