@@ -15,4 +15,4 @@ Just `git clone` and start with the `index.html` with VS-Code Live-Server on Win
 ### Features
 * About Page
 * Hotel Booking Page
-* 
+  
